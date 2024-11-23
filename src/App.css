@@ -1,0 +1,140 @@
+/* header*/
+.header {
+  background: rgb(255, 251, 2);
+  position: fixed;
+  padding: 20px 0;
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #191819;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  font-size: 1.8rem;
+}
+
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  margin-right: 130px;
+  gap: 90px;
+}
+
+.sitenav__link {
+  font-size: 1.8rem;
+  color: #2809d6;
+
+  font-weight: 550;
+}
+
+/* card */
+.movie {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.movie__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.movie__card {
+  width: 615px;
+  background: #08a8bd;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0px 7px 10px -5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.movie__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+.movie__info {
+  padding: 20px 20px 40px 20px;
+}
+
+.movie__pic {
+  width: 100%;
+  height: 389px;
+  padding: 10px;
+}
+
+.movie__wrap {
+  position: relative;
+}
+
+.movie__like {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie .fa-solid.fa-heart {
+  color: #e63048;
+  background: #fffeff;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.movie__like i {
+  background: #fffeff;
+  color: rgb(174, 172, 177);
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.movie__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.movie__desc {
+  color: #250c25;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+
+.movie__card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.movie__card-content div span {
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.movie__card-content div span {
+  display: block;
+}
