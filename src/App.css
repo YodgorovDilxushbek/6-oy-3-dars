@@ -78,6 +78,14 @@
   height: 389px;
   padding: 10px;
 }
+.movie__like {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .movie__wrap {
   position: relative;

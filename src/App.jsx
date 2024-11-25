@@ -3,16 +3,29 @@ import "./App.css";
 import data from "./assets/data/movie.json";
 
 function App() {
+  const [likeMovie, setLikeMovie] = useState([]);
+
   const [counter, setCounter] = useState(0);
 
 
+  function handleClickLike(movieId) {
+    setLikeMovie((movie) => {
+      if (movie.includes(movieId)) {
+        setCounter(counter - 1);
+        return movie.filter((id) => id !== movieId);
+      } else {
+        setCounter(counter + 1);
+        return [...movie, movieId];
+      }
+    });
+  }
 
   return (
     <>
       <header className="header">
         <div className="container header__container">
           <a className="logo-link" href="#">
-          🎬
+            🎬
             Kino Ro'yhati
           </a>
           <nav className="sitenav">
@@ -51,6 +64,16 @@ function App() {
                     src={movie.Images?.[1] || "https://picsum.photos/200/300"}
                     alt={`Image of ${movie.Title}`}
                   />
+                    <div className="movie__like">
+                    <i
+                      onClick={() => handleClickLike(movie.id)}
+                      className={`fa-heart ${
+                        likeMovie.includes(movie.id)
+                          ? "fa-solid liked"
+                          : "fa-regular"
+                      }`}
+                    ></i>
+                  </div>
                 </div>
                 <div className="movie__info">
                   <h2 className="movie__title">{movie.Title}</h2>
